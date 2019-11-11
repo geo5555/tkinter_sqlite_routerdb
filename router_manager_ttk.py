@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 from tkinter.ttk import Treeview
+from tkinter.ttk import *
 from db1 import Database
 
 db = Database('router.db')
@@ -85,17 +86,17 @@ frame_search = Frame(app)
 frame_search.grid(row=0, column=0)
 
 lbl_search = Label(frame_search, text='Search by hostname',
-                   font=('bold', 12), pady=20)
+                   font=('bold', 12))
 lbl_search.grid(row=0, column=0, sticky=W)
 hostname_search = StringVar()
 hostname_search_entry = Entry(frame_search, textvariable=hostname_search)
 hostname_search_entry.grid(row=0, column=1)
 
 lbl_search = Label(frame_search, text='Search by Query',
-                   font=('bold', 12), pady=20)
+                   font=('bold', 12))
 lbl_search.grid(row=1, column=0, sticky=W)
 query_search = StringVar()
-query_search.set("Select * from routers where ram>1024")
+query_search.set("Select * from routers")
 query_search_entry = Entry(frame_search, textvariable=query_search, width=40)
 query_search_entry.grid(row=1, column=1)
 
@@ -123,13 +124,13 @@ ram_entry.grid(row=1, column=1, sticky=W)
 
 # FLASH
 flash_text = StringVar()
-flash_label = Label(frame_fields, text='Flash', font=('bold', 12), pady=20)
+flash_label = Label(frame_fields, text='Flash', font=('bold', 12), )
 flash_label.grid(row=1, column=2, sticky=E)
 flash_entry = Entry(frame_fields, textvariable=flash_text)
 flash_entry.grid(row=1, column=3, sticky=W)
 
 frame_router = Frame(app)
-frame_router.grid(row=4, column=0, columnspan=4, rowspan=6, pady=20, padx=20)
+frame_router.grid(row=4, column=0, columnspan=4, rowspan=6, padx=20)
 
 columns = ['id', 'Hostname', 'Brand', 'Ram', 'Flash']
 router_tree_view = Treeview(frame_router, columns=columns, show="headings")
@@ -148,7 +149,7 @@ frame_btns = Frame(app)
 frame_btns.grid(row=3, column=0)
 
 add_btn = Button(frame_btns, text='Add Router', width=12, command=add_router)
-add_btn.grid(row=0, column=0, pady=20)
+add_btn.grid(row=0, column=0)
 
 remove_btn = Button(frame_btns, text='Remove Router',
                     width=12, command=remove_router)

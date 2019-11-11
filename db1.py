@@ -38,9 +38,9 @@ class Database:
         self.conn.close()
 
 
-db = Database('router.db')
-db.insert("rtr001", "Cisco", "512", "256")
-db.insert("rtr002", "Cisco", "1024", "256")
-db.insert("rtr003", "Cisco", "2048", "256")
-db.insert("rtr004", "Juniper", "2048", "256")
-db.insert("rtr005", "Huawei", "2048", "256")
+# db = Database('router.db')
+# db.insert("rtr001", "Cisco", "512", "256")
+# db.insert("rtr002", "Cisco", "1024", "256")
+# db.insert("rtr003", "Cisco", "2048", "256")
+# db.insert("rtr004", "Juniper", "2048", "256")
+# db.insert("rtr005", "Huawei", "2048", "256")
