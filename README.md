@@ -6,7 +6,12 @@ git clone the repo
 
 run
 
-$python3 router_manager.py
-or
-$python3 router_manager_ttk.py
+python router_manager.py
 
+or
+
+python router_manager_ttk.py
+
+on linux
+
+use python3 router_manager.py
